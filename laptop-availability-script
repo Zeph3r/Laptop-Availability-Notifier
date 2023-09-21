@@ -1,8 +1,12 @@
 import os
 import requests
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Constants from .env or directly from the environment
-API_ENDPOINT = "https://isupport.gmh.edu/api/v1/cmdb"  # Replace with the actual endpoint if different
+API_ENDPOINT = os.environ.get('API_ENDPOINT')
 TOKEN = os.environ.get('BOSSDESK_API_TOKEN')
 
 # Setup headers for API request
@@ -13,8 +17,8 @@ headers = {
 
 def fetch_and_count_available_devices():
     params = {
-        "type": "laptop",  # Adjust based on the actual parameter name from the API documentation
-        "status": "available"  # Adjust based on the actual parameter name from the API documentation
+        "type": "laptop",
+        "status": "available"
     }
 
     try:
