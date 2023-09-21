@@ -33,13 +33,13 @@ The script will output the number of available laptops based on the API's respon
 
 ## Configuration
 
-Configuration is managed through a *.env* file. Create a *.env* file in the root directory of the project and specify the required environment variables:
+Configuration is managed through a **.env** file. Create a **.env** file in the root directory of the project and specify the required environment variables:
 ```powershell
 BOSSDESK_API_TOKEN=your_token
 API_ENDPOINT=https://mycompany.bossdesk.io/api/v1/cmdb
 ```
-- *BOSSDESK_API_TOKEN*: Your BOSSDesk API token for authentication
-- *API_ENDPOINT*: The endpoint URL of the BOSSDesk API you are targeting.
+- **BOSSDESK_API_TOKEN**: Your BOSSDesk API token for authentication
+- **API_ENDPOINT**: The endpoint URL of the BOSSDesk API you are targeting.
 
 *Note: Ensure that you never commit the .env file to the version control to keep sensitive data secure*
 
